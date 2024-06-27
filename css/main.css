@@ -97,6 +97,11 @@ p {
   transition: 0.3s;
 }
 
+.destacar {
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent-color);
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -802,7 +807,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 75px 0;
+  padding: 60px 0;
   scroll-margin-top: 98px;
   overflow: clip;
 }
@@ -859,7 +864,13 @@ section,
   display: flex;
   align-items: center;
   background: url(../img/hero-bg.png) top center no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+
+.hero .order-2 {
+  background-color: white;
+  padding: 30px;
+  margin-block-start: 50px;
 }
 
 .hero h1 {
@@ -931,11 +942,11 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-.hero .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
 @media (max-width: 640px) {
+  .hero .order-2 {
+    margin-block-start: 0;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);  }
   .hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -962,9 +973,13 @@ section,
 # CLIENTES Section
 --------------------------------------------------------------*/
 
-#clients {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-  padding: 40px 0;
+.clients .marco{
+  background-image: url(../img/iconos-16.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  border: 25px solid var(--naranja);
 }
 
 /*--------------------------------------------------------------
@@ -978,14 +993,12 @@ section,
 
 .about .content h3 {
   font-size: 14px;
-  font-weight: 700;
   color: var(--accent-color);
   text-transform: uppercase;
 }
 
 .about .content h2 {
   font-size: 24px;
-  font-weight: 700;
 }
 
 .about .content p {
@@ -1071,14 +1084,20 @@ transform: scale(1);
 # Stats Section
 --------------------------------------------------------------*/
 #stats {
-  background: var(--degradado);
+  background-image: url(../img/iconos-25.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   font-family: var(--heading-font);
-  color: white;
+  color: var(--accent-color);
+  box-shadow: inset 1px 2px 11px 2px rgba(0,0,0,0.57);
+  padding: 90px 0;
 }
 
 .stats p {
   font-size: 32px;
+  margin: 16px 0 0 0;
 }
 
 #stats .stats-item {
@@ -1119,6 +1138,12 @@ transform: scale(1);
   display: flex;
 }
 
+.alt-features .iconos {
+  width: 44px;
+  height: 44px;
+  margin-right: 15px;
+}
+
 .alt-features .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
@@ -1143,10 +1168,6 @@ transform: scale(1);
 --------------------------------------------------------------*/
 #services {
   background: white;
-  background-image: url(../img/bg-1-10.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
 }
 
 .services .section-title p {
@@ -1157,24 +1178,20 @@ transform: scale(1);
   color: var(--accent-color);
 }
 
+.services .service-item:hover {
+  transform: rotate(1deg);
+}
+
 .services .service-item .servicio-icono {
   width: 80px;
   margin-bottom: 25px;
   transition: 0.3s;
-  border-radius: 4px;
-}
-
-.services .service-item:hover .servicio-icono {
-  background-color: white;
-  padding: 10px;
-  border-radius: 9px;
 }
 
 .services .service-item {
   height: 100%;
   padding: 30px 30px;
   transition: 0.3s;
-  border-radius: 9px;
   background: white;
   display: flex;
   flex-direction: row;
@@ -1185,7 +1202,6 @@ transform: scale(1);
 .services .service-item .icon {
   font-size: 36px;
   padding: 20px 20px;
-  border-radius: 4px;
   position: relative;
   margin-bottom: 25px;
   display: inline-block;
@@ -1214,7 +1230,8 @@ transform: scale(1);
 
 /*-----------ROSA-----------*/
 .services .service-item.item-cyan {
-  border: 3px solid var(--rosa);
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .services .service-item.item-cyan .icon {
@@ -1226,14 +1243,10 @@ transform: scale(1);
   color: var(--rosa);
 }
 
-.services .service-item.item-cyan:hover {
-  background: rgb(0,177,235);
-  background: var(--rosa);
-}
-
 /*-----------CELESTE-----------*/
 .services .service-item.item-orange {
-  border: 3px solid var(--celeste);
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .services .service-item.item-orange .icon {
@@ -1245,14 +1258,10 @@ transform: scale(1);
   color: var(--celeste);
 }
 
-.services .service-item.item-orange:hover {
-  background: rgb(0,177,235);
-  background: var(--celeste);
-}
-
 /*-----------VERDE-----------*/
 .services .service-item.item-teal {
-  border: 3px solid var(--verde);
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .services .service-item.item-teal .icon {
@@ -1264,14 +1273,10 @@ transform: scale(1);
   color: var(--verde);
 }
 
-.services .service-item.item-teal:hover {
-  background: rgb(0,177,235);
-  background: var(--verde);
-}
-
 /*-----------ROSA-----------*/
 .services .service-item.item-red {
-  border: 3px solid var(--rosa);
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .services .service-item.item-red .icon {
@@ -1283,14 +1288,10 @@ transform: scale(1);
   color: var(--rosa);
 }
 
-.services .service-item.item-red:hover {
-  background: rgb(0,177,235);
-  background: var(--rosa);
-}
-
 /*-----------CELESTE-----------*/
 .services .service-item.item-indigo {
-  border: 3px solid var(--celeste);
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .services .service-item.item-indigo .icon {
@@ -1302,14 +1303,10 @@ transform: scale(1);
   color: var(--celeste);
 }
 
-.services .service-item.item-indigo:hover {
-  background: rgb(0,177,235);
-  background: var(--celeste);
-}
-
 /*-----------VERDE-----------*/
 .services .service-item.item-pink {
-  border: 3px solid var(--verde);
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .services .service-item.item-pink .icon {
@@ -1321,26 +1318,29 @@ transform: scale(1);
   color: var(--verde);
 }
 
-.services .service-item.item-pink:hover {
-  background: rgb(0,177,235);
-  background: var(--verde);
-}
-
-.services .service-item:hover h3,
-.services .service-item:hover p,
-.services .service-item:hover .read-more {
-  color: #fff;
-}
-
-.services .service-item:hover .icon {
-  background: #fff;
-}
-
 /*--------------------------------------------------------------
-# Pricing Section
+# CURSOS Section
 --------------------------------------------------------------*/
 .curso-details {
-  background: var(--degradado);
+  background-image: url(../img/bg-1-10.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.curso-details .section-title {
+  background-image: url(../img/iconos-10.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 30px 12px;
+}
+
+.curso-details .section-title p,
+.curso-details .section-title h2 {
+  color: var(--contrast-color);
 }
 
 .curso-details .curso-details-slider .swiper-slide {
@@ -1350,11 +1350,15 @@ transform: scale(1);
   padding: 60px;
 }
 
+.curso-details .curso-details-slider .row {
+  background-color: var(--background-color);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
 .curso-details .curso-details-slider .cursos-texto {
-  padding: 30px 90px 30px 30px;
+  padding: 0 90px 0 30px;
   background-color: white;
   width: 100%;
-  border-radius: 9px 0 0 9px;
 }
 
 .curso-details .curso-details-slider .cursos-texto ul{
@@ -1373,10 +1377,6 @@ transform: scale(1);
 .curso-details .curso-details-slider img {
   width: 100%;
   transition: 0.3s;
-}
-
-.curso-details .curso-details-slider:hover img {
-  transform: scale(1.1);
 }
 
 .curso-details .btn-buy {
@@ -1528,6 +1528,24 @@ transform: scale(1);
   color: var(--contrast-color);
 }
 
+@media (max-width: 1200px) {
+  .curso-details .curso-details-slider .swiper-slide {
+    display:flex;
+    flex-direction: column-reverse;
+  }
+
+  .curso-details .curso-details-slider .cursos-texto {
+    padding: 30px;
+    border-radius: 0 0 9px 9px;
+  }
+
+  .curso-details .btn-buy {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);  
+  }
+
+}
+
 /*--------------------------------------------------------------
 # BENEFICIOS Section
 --------------------------------------------------------------*/
@@ -1545,7 +1563,6 @@ transform: scale(1);
 .features .feature-box {
   padding: 24px 20px;
   border: 2px var(--accent-color) solid;
-  border-radius: 9px;
   transition: 0.3s;
   height: 100%;
   width: 280px;
@@ -1558,13 +1575,12 @@ transform: scale(1);
 }
 
 .features .feature-box i {
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
   color: var(--accent-color);
   line-height: 0;
   padding: 4px;
   margin-right: 10px;
   font-size: 24px;
-  border-radius: 3px;
   transition: 0.3s;
 }
 
@@ -1730,30 +1746,28 @@ transform: scale(1);
 # Portfolio Section
 --------------------------------------------------------------*/
 .fondo-2 {
-  background-image: url(../img/bg-2-11.png);
+  background-image: url(../img/bg-1-10.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .portfolio .section-title h2, 
 .portfolio .section-title p {
-  color: var(--default-color);
+  color: white;
 }
 
-.container-texto {
+.portfolio .container-texto {
   text-align: center;
   width: 50%;
-  border: 3px var(--accent-color) solid;
-  border-radius: 9px;
   padding: 30px;
   margin-block-end: 60px;
   background-color: white;
-  
 }
 
 .portfolio .container-texto p {
-  font-size: 20px;
+  font-size: 17px;
+  margin-bottom: 0;
 }
 
 .portfolio .portfolio-filters {
@@ -1801,15 +1815,15 @@ transform: scale(1);
 }
 
 .portfolio .color-azul {
-  border: 2px solid var(--celeste);
+  border: 6px solid white;
 }
 
 .portfolio .color-rosa {
-  border: 2px solid var(--rosa);
+  border: 6px solid white;
 }
 
 .portfolio .color-verde {
-  border: 2px solid var(--verde);
+  border: 6px solid white;
 }
 
 .portfolio .portfolio-content img {
@@ -1877,11 +1891,17 @@ transform: scale(1);
   transform: scale(1.1);
 }
 
+@media (max-width: 880px){
+  .portfolio .container-texto {
+    width: 100%;
+  }
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
 #testimonials {
-  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  background-color: var(--background-color);
 }
 
 .testimonials .testimonial-item {
@@ -1893,12 +1913,25 @@ transform: scale(1);
   flex-direction: column;
   text-align: center;
   transition: 0.3s;
-  border-radius: 9px;
   background: white;
+  background-color: var(--naranja);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.testimonials .testimonial-item .stars {
-  margin-bottom: 15px;
+.testimonials .testimonial-item img {
+  width: 50%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials .testimonial-item .stars,
+.testimonials .testimonial-item p,
+.testimonials .testimonial-item .profile {
+  background-color: var(--contrast-color);
+  padding: 15px 5px;
+
 }
 
 .testimonials .testimonial-item .stars i {
@@ -1926,7 +1959,7 @@ transform: scale(1);
 
 .testimonials .testimonial-item p {
   font-style: italic;
-  margin: 0 auto 15px auto;
+  margin: 0;
 }
 
 .testimonials .swiper-wrapper {
@@ -1977,13 +2010,15 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+#team {
+  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+}
+
 .team .team-member {
-  box-shadow: 0px 0 30px color-mix(in srgb, var(--default-color), transparent 92%);
   overflow: hidden;
   text-align: center;
-  border-radius: 9px;
   transition: 0.3s;
-  border: 2px solid var(--accent-color);
+  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .team .team-member .member-img {
@@ -1998,7 +2033,6 @@ transform: scale(1);
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: url(../img/team-shape.svg) no-repeat center bottom;
   background-size: contain;
   z-index: 1;
 }
@@ -2008,7 +2042,6 @@ transform: scale(1);
   right: -100%;
   top: 30px;
   opacity: 0;
-  border-radius: 4px;
   transition: 0.5s;
   background: color-mix(in srgb, var(--accent-color), transparent 60%);
   z-index: 2;
@@ -2033,6 +2066,7 @@ transform: scale(1);
 
 .team .team-member .member-info {
   padding: 10px 15px 20px 15px;
+  background-color: var(--background-color);
 }
 
 .team .team-member .member-info h4 {
@@ -2754,7 +2788,16 @@ transform: scale(1);
 # RESUMEN DETALLE
 --------------------------------------------------------------*/
 .portfolio-details-detalle {
-  background: var(--degradado);
+  background-image: url(../img/bg-1-10.jpg);
+}
+
+.portfolio-details-detalle .section-title{
+  background-image: url(../img/iconos-10.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px 12px;
+  margin-block-end: 50px;
 }
 
 .portfolio-details-detalle .section-title p {
@@ -2763,6 +2806,7 @@ transform: scale(1);
 
 .portfolio-details-detalle .portfolio-details-slider img {
   width: 100%;
+  border: 10px solid var(--contrast-color);
 }
 
 .portfolio-details-detalle .portfolio-details-slider .swiper-pagination {
@@ -2784,7 +2828,6 @@ transform: scale(1);
 .portfolio-details-detalle .portfolio-info {
   padding: 15px 30px 30px 30px;
   background: white;  
-  border-radius: 0 0 9px 9px;
 }
 
 .portfolio-details-detalle .portfolio-info h3 {
@@ -2807,7 +2850,6 @@ transform: scale(1);
 .portfolio-details-detalle .portfolio-description {
   padding: 30px 30px 15px 30px;
   background: white;
-  border-radius: 9px 9px 0 0;
 }
 
 .portfolio-details-detalle .portfolio-description h2 {
