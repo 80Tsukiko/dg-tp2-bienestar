@@ -26,12 +26,12 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color:#3a3628; /* e3bb2f -- Color for headings, subheadings and title throughout the website */
-  --accent-color: #FFC800; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #fbcd26; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
-  --celeste: #5dcfe3;
-  --rosa: #cf61a1;
-  --naranja: #e3bb2f;
-  --verde:#56d6a9;
+  --celeste: rgb(93, 217, 245);
+  --rosa: rgb(233, 121, 195);
+  --naranja: rgb(245, 199, 70);
+  --verde:rgb(110, 218, 171);
   --degradado: linear-gradient(to right, #f89b29, #ff7f36, #ff6049, #ff3d61, #ff0f7b);
 }
 
@@ -82,6 +82,7 @@ h6 {
 
 p {
   font-size: 15px;
+  font-weight: 500;
 }
 
 .boton-mas {
@@ -108,8 +109,7 @@ p {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--background-color);
   padding: 20px 0 15px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -190,7 +190,11 @@ p {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #ffffff;
+  background-color: var(--background-color);
+}
+
+.index-page.scrolled .header .navmenu a {
+  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
@@ -216,7 +220,7 @@ p {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--background-color);
     padding: 18px 12px;
     font-size: 15px;
     font-family: var(--nav-font);
@@ -238,12 +242,6 @@ p {
 
   .navmenu li:last-child a {
     padding-right: 0;
-  }
-
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
   }
 
   .navmenu .dropdown ul {
@@ -365,7 +363,7 @@ p {
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
     background-color: var(--accent-color);
-    color: var(--contrast-color);
+    color: var(--background-color);
   }
 
   .navmenu a:hover,
@@ -830,15 +828,14 @@ section,
 }
 
 .section-title h2 {
-  font-size: 13px;
+  font-size: 14px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 800;  
   letter-spacing: 1px;
-  font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  color: var(--accent-color);
   display: inline-block;
-  text-transform: uppercase;
-  border-radius: 9px;
   font-family: var(--default-font);
 }
 
@@ -865,7 +862,6 @@ section,
   padding: 15px 40px;
   transition: 0.5s;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
-  transform: rotate(1deg);
 }
 
 .btn-read-more span {
@@ -911,10 +907,10 @@ section,
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.jpg);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(../img/iconos-30.png), url(../img/hero-bg.jpg);
+  background-position: right bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
 }
 
 .hero .order-2 {
@@ -931,6 +927,7 @@ section,
   font-size: 65px;
   font-weight: 700;
   line-height: 62px;
+  font-variant-ligatures: none;
 }
 
 .hero .volanta {
@@ -967,12 +964,12 @@ section,
   background: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 40px;
+  padding: 9px 40px;
   transition: 0.5s;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(1deg);
@@ -1047,34 +1044,170 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Hero DETALLE Section
+--------------------------------------------------------------*/
+.hero-detalle {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0 60px 0;
+  display: flex;
+  align-items: center;
+  background: url(../img/hero-bg.jpg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-detalle .order-2 {
+  padding: 30px;
+  margin-block-start: 50px;
+  background-image: url(../img/hero-texto.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid var(--heading-color);
+}
+
+.hero-detalle h1 {
+  margin: 0;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 62px;
+  font-variant-ligatures: none;
+}
+
+.hero-detalle .volanta {
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent-color);
+  color: var(--accent-color);
+  border: 0;
+  text-transform: uppercase;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.hero-detalle .bi::before {
+  font-weight: bold !important;    
+  vertical-align: -0.22em;
+  line-height: 0;
+}
+
+.hero-detalle .destacar {
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent-color);
+  border: 0;
+}
+
+.hero-detalle p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 20px 0 30px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hero-detalle .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 40px;
+  transition: 0.5s;
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  transform: rotate(1deg);
+
+}
+
+.hero-detalle .btn-get-started i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.hero-detalle .btn-get-started:hover {
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  transform: rotate(0deg);
+}
+
+.hero-detalle .btn-get-started:hover i {
+  transform: translateX(5px);
+}
+
+.hero-detalle .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.hero-detalle .btn-watch-video i {
+  color: var(--accent-color);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero-detalle .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+.hero-detalle .btn-watch-video:hover i {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 640px) {
+  .hero-detalle .order-2 {
+    margin-block-start: 0;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);  }
+  .hero-detalle h1 {
+    font-size: 46px;
+    line-height: 44px;
+    }
+  .hero-detalle .volanta {
+    font-size: 25px;
+  }
+  .hero-detalle p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*--------------------------------------------------------------
 # CLIENTES Section
 --------------------------------------------------------------*/
-.clients {
-  background-image: url(../img/metal-blanco.png);
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
-}
+
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about {
-  background-image: url(../img/iconos-30.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 10%;
-}
 
 .about .content {
   padding: 40px;
 }
 
 .about .content h3 {
-  font-size: 16px;
+  font-family: var(--default-font);
+  font-size: 14px;
   color: var(--accent-color);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .about .content h2 {
@@ -1151,8 +1284,10 @@ transform: scale(1);
 }
 
 .stats p {
-  font-size: 32px;
+  font-weight: 600;
   margin: 16px 0 0 0;
+  font-size: 34px;
+  color: var(--default-color);
 }
 
 #stats .stats-item {
@@ -1200,9 +1335,10 @@ transform: scale(1);
 }
 
 .alt-features .icon-box h4 {
-  font-size: 20px;
+  font-family: var(--default-font);
+  font-size: 16px;
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 .alt-features .icon-box i {
@@ -1223,12 +1359,16 @@ transform: scale(1);
 --------------------------------------------------------------*/
 
 .services .section-title p {
-  color: var(--accent-color);
+  color: var(--default-color);
   font-weight: 600;
 }
 
 .services .section-title h2 {
+  font-family: var(--default-font);
+  font-size: 14px;
   color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .services .service-item .servicio-icono {
@@ -1259,7 +1399,9 @@ transform: scale(1);
 }
 
 .services .service-item h3 {
-  font-size: 24px;
+  font-family: var(--default-font);
+  font-size: 17px;
+  font-weight: 800;
 }
 
 .services .service-item .read-more {
@@ -1279,8 +1421,8 @@ transform: scale(1);
 
 /*-----------ROSA-----------*/
 .services .service-item.item-cyan {
-  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
-  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--naranja), transparent 75%);
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(1deg);
 }
 
@@ -1290,13 +1432,14 @@ transform: scale(1);
 }
 
 .services .service-item.item-cyan .read-more {
-  color: var(--rosa);
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--naranja), transparent 75%);
 }
 
 /*-----------CELESTE-----------*/
 .services .service-item.item-orange {
-  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
-  box-shadow: 5px 4px 20px 0px color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--naranja), transparent 75%);
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(-1deg);
 }
 
@@ -1306,7 +1449,8 @@ transform: scale(1);
 }
 
 .services .service-item.item-orange .read-more {
-  color: var(--celeste);
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--naranja), transparent 75%);
 }
 
 .services .service-item:hover {
@@ -1367,9 +1511,34 @@ transform: scale(1);
   width: 100%;
 }
 
+.curso-details .curso-details-slider .cursos-texto .color-azul {
+  font-family: var(--default-font);
+  font-weight: 800;
+  color: var(--default-color);
+  border-bottom: 4px solid var(--celeste);
+  display: inline;
+}
+
+.curso-details .curso-details-slider .cursos-texto .color-rosa {
+  font-family: var(--default-font);
+  font-weight: 800;
+  color: var(--default-color);
+  border-bottom: 4px solid var(--rosa);
+  display: inline;
+}
+
+.curso-details .curso-details-slider .cursos-texto .color-verde {
+  font-family: var(--default-font);
+  font-weight: 800;
+  color: var(--default-color);
+  border-bottom: 4px solid var(--verde);
+  display: inline;
+}
+
 .curso-details .curso-details-slider .cursos-texto ul{
   list-style: none;
   padding: 0;
+  margin-block-start: .5rem;
 }
 
 .curso-details .curso-details-slider .cursos-texto ul li{
@@ -1388,7 +1557,6 @@ transform: scale(1);
 .curso-details .btn-buy {
   display: inline-block;
   padding: 8px 40px 10px 40px;
-  border-radius: 9px;
   color: var(--accent-color);
   transition: none;
   font-size: 16px;
@@ -1588,7 +1756,8 @@ transform: scale(1);
 }
 
 .features .feature-box h3 {
-  font-size: 18px;
+  font-family: var(--default-font);
+  font-size: 15px;
   margin: 0;
   color: var(--default-color);
 }
@@ -1689,37 +1858,56 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Faq Section TEMAS Y DIAS
 --------------------------------------------------------------*/
-.faq-detalle .faq-container .faq-item {
+.faq-detalle-dias {
+  background-image: url(../img/hero-texto.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.faq-detalle-dias .section-title {
+  background-color: var(--background-color);
+  padding: 15px 0 15px 0;
+  margin-block-end: 25px;}
+
+.faq-detalle-dias .col-lg-6 {
+  background-color: var(--background-color);
+  padding: 10px;
+}
+
+.faq-detalle-dias .faq-container .faq-item {
   position: relative;
-  padding: 20px 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-width: 1.5px;
+  border-color: var(--default-color);
+  border-style: solid;
   overflow: hidden;
 }
 
-.faq-detalle .faq-container .faq-item:last-child {
+.faq-detalle-dias .faq-container .faq-item:last-child {
   margin-bottom: 0;
 }
 
-.faq-detalle .faq-container .faq-item h3 {
-  font-size: 16px;
+.faq-detalle-dias .faq-container .faq-item h3 {
+  font-size: 22px;
   line-height: 24px;
-  margin: 0 30px 0 0;
+  margin: 0;
   transition: 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
+  padding: 20px 20px 10px 20px;
+  color: var(--rosa);
 }
 
-.faq-detalle .faq-container .faq-item h3 .num {
+.faq-detalle-dias .faq-container .faq-item h3 .num {
   color: var(--accent-color);
   padding-right: 5px;
 }
 
-.faq-detalle .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+.faq-detalle-dias .faq-container .faq-item h3:hover {
+  color: var(--default-color);
 }
 
-.faq-detalle .faq-container .faq-item .faq-content {
+.faq-detalle-dias .faq-container .faq-item .faq-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
@@ -1727,12 +1915,12 @@ transform: scale(1);
   opacity: 0;
 }
 
-.faq-detalle .faq-container .faq-item .faq-content p {
+.faq-detalle-dias .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
 }
 
-.faq-detalle .faq-container .faq-item .faq-toggle {
+.faq-detalle-dias .faq-container .faq-item .faq-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1740,36 +1928,51 @@ transform: scale(1);
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
+  color: var(--rosa);
 }
 
-.faq-detalle .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
+.faq-detalle-dias .faq-container .faq-item .faq-toggle:hover {
+  color: var(--default-color);
 }
 
-.faq-detalle .faq-container .faq-active h3 {
-  color: var(--accent-color);
+.faq-detalle-dias .faq-container .faq-active h3 {
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--rosa), transparent 90%);
+  border-bottom: 1.5px solid var(--default-color);
 }
 
-.faq-detalle .faq-container .faq-active .faq-content {
+.faq-detalle-dias .faq-container .faq-active .faq-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
-  padding-top: 10px;
+  padding: 20px;
 }
 
-.faq-detalle .faq-container .faq-active .faq-toggle {
+.faq-detalle-dias .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-  color: var(--accent-color);
+  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
 .fondo-2 {
-  background-image: url(../img/fotos-galeria.png), url(../img/bg-galeria.jpg);
-  background-position: top center, left center;
-  background-repeat: repeat, no-repeat;
-  background-size: 45%, cover;
+  background-image: url(../img/bg-galeria.jpg);
+  background-position: top;
+  background-size: cover;
+  margin-inline: 24px;
+  margin-block-end: 12px;
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+}
+
+.portfolio .section-title {
+  background-image: url(../img/iconos-10.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.58);
+    padding: 30px 12px;
 }
 
 .portfolio .section-title h2, 
@@ -2099,7 +2302,11 @@ transform: scale(1);
 
 .team .team-member .member-info-1 h4 {
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: var(--default-font);
+  border-block-end: 3px solid var(--celeste);
+  display: inline-block;
 }
 
 .team .team-member .member-info-1 span {
@@ -2870,10 +3077,12 @@ transform: scale(1);
 }
 
 .portfolio-details-detalle .portfolio-info h3 {
-  font-size: 22px;
+  font-family: var(--default-font);
+  font-size: 20px;
+  font-weight: 800;
   margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 0%);
+  padding-bottom: 6px;
+  border-bottom: 3px solid color-mix(in srgb, var(--accent-color), transparent 0%);
 }
 
 .portfolio-details-detalle .portfolio-info ul {
