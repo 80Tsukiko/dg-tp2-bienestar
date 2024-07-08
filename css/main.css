@@ -23,14 +23,14 @@
 
 /*  Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #f5f5f5; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color:#3a3628; /* e3bb2f -- Color for headings, subheadings and title throughout the website */
   --accent-color: #fbcd26; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
   --celeste: rgb(93, 217, 245);
   --rosa: rgb(233, 121, 195);
-  --naranja: rgb(245, 199, 70);
+  --naranja: #f5c746;
   --verde:rgb(110, 218, 171);
   --degradado: linear-gradient(to right, #f89b29, #ff7f36, #ff6049, #ff3d61, #ff0f7b);
 }
@@ -109,10 +109,12 @@ p {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--background-color);
+  background-color: white;
+  color: var(--default-color);
   padding: 20px 0 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .header .logo {
@@ -133,7 +135,7 @@ p {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--contrast-color);
+  color: var(--default-color);
   background: var(--accent-color);
   font-size: 15px;
   padding: 8px 25px;
@@ -145,7 +147,7 @@ p {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
+  color: var(--default-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
@@ -220,7 +222,7 @@ p {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--background-color);
+    color: var(--default-color);
     padding: 18px 12px;
     font-size: 15px;
     font-family: var(--nav-font);
@@ -647,6 +649,7 @@ p {
   font-size: 16px;
   position: relative;
   padding-bottom: 12px;
+  font-family: var(--default-font);
 }
 
 .footer .footer-links {
@@ -805,7 +808,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 30px 0 60px 0;
   scroll-margin-top: 98px;
   overflow: clip;
 }
@@ -842,7 +845,7 @@ section,
 .section-title p {
   color: var(--heading-color);
   margin: 10px 0 0 0;
-  font-size: 36px;
+  font-size: 38px;
   font-family: var(--heading-font);
   font-weight: 600;
 }
@@ -867,7 +870,7 @@ section,
 .btn-read-more span {
   font-family: var(--default-font);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
@@ -924,7 +927,7 @@ section,
 
 .hero h1 {
   margin: 0;
-  font-size: 65px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 62px;
   font-variant-ligatures: none;
@@ -962,9 +965,9 @@ section,
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 20px;
+  font-family: var(--default-font);
+  font-weight: 600;
+  font-size: 15px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -1221,6 +1224,46 @@ section,
   line-height: 24px;
 }
 
+
+/*--------------------------------------------------------------
+# CERTIFICADO
+--------------------------------------------------------------*/
+.certificado {
+  background-color: var(--celeste);
+  background-image: url(../img/bg-3.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.certificado .content {
+  padding: 40px;
+}
+
+.certificado .content h3 {
+  font-family: var(--default-font);
+  font-size: 14px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.certificado .content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  background-color: var(--contrast-color);
+  padding: 15px;
+  font-variant-ligatures: none;
+}
+
+.certificado .content p {
+  margin: 15px 0 30px 0;
+  line-height: 24px;
+  background-color: var(--contrast-color);
+  padding: 15px;
+}
+
 /*--------------------------------------------------------------
 # Values Section
 --------------------------------------------------------------*/
@@ -1324,6 +1367,10 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Alt Features Section
 --------------------------------------------------------------*/
+.features {
+  background-color: var(--contrast-color);
+}
+
 .alt-features .icon-box {
   display: flex;
 }
@@ -1421,7 +1468,7 @@ transform: scale(1);
 
 /*-----------ROSA-----------*/
 .services .service-item.item-cyan {
-  background-color: color-mix(in srgb, var(--naranja), transparent 75%);
+  background-color: color-mix(in srgb, var(--naranja), transparent 40%);
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(1deg);
 }
@@ -1438,7 +1485,7 @@ transform: scale(1);
 
 /*-----------CELESTE-----------*/
 .services .service-item.item-orange {
-  background-color: color-mix(in srgb, var(--naranja), transparent 75%);
+  background-color: color-mix(in srgb, var(--naranja), transparent 40%);
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(-1deg);
 }
@@ -1465,24 +1512,30 @@ transform: scale(1);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  background-color: var(--contrast-color);
   margin-inline: 24px;
-  margin-block-end: 12px;
+  margin-block: 56px 12px;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .curso-details .section-title {
-  background-image: url(../img/iconos-10.png);
-  background-position: top center;
-  background-size: cover;
+  background-image: url(../img/chincheta.png), url(../img/chincheta.png);
+  background-position: top left, top right;
+  background-size: 40px;
   background-repeat: no-repeat;
-  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+  background-color: rgb(210 238 255);
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
   padding: 30px 12px;
 }
 
 .curso-details .section-title p,
 .curso-details .section-title h2 {
-  color: var(--contrast-color);
+  color: var(--default-color);
+}
+
+.curso-details .section-title p {
+  display: inline;
+  border-bottom: 5px solid var(--celeste);
 }
 
 .curso-details .curso-details-slider .swiper-slide {
@@ -1493,7 +1546,7 @@ transform: scale(1);
 }
 
 .curso-details .curso-details-slider .row {
-  background-color: var(--background-color);
+  background-color: var(--contrast-color);
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
 }
 
@@ -1505,10 +1558,19 @@ transform: scale(1);
   transform: rotate(-.5deg);
 }
 
+.curso-details .curso-details-slider .justify-content-center {
+  justify-content: space-between !important;
+}
+
 .curso-details .curso-details-slider .cursos-texto {
-  padding: 0 90px 0 30px;
+  padding: 30px 90px 30px 30px;
   background-color: white;
   width: 100%;
+}
+
+.curso-details .curso-details-slider .cursos-texto h3 {
+  line-height: 1.5;
+  font-variant-numeric: lining-nums;
 }
 
 .curso-details .curso-details-slider .cursos-texto .color-azul {
@@ -1538,11 +1600,23 @@ transform: scale(1);
 .curso-details .curso-details-slider .cursos-texto ul{
   list-style: none;
   padding: 0;
-  margin-block-start: .5rem;
+  margin-block-start: 1rem;
 }
 
 .curso-details .curso-details-slider .cursos-texto ul li{
   padding-bottom: 5px;
+}
+
+.curso-details .curso-details-slider .cursos-texto p {
+  margin-block-end: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-variant-numeric: lining-nums;
+  color: var(--accent-color);
+}
+
+.curso-details .curso-details-slider .cursos-texto .tachado {
+  text-decoration: line-through;
 }
 
 .curso-details .curso-details-slider .cursos-imagen {
@@ -1557,14 +1631,16 @@ transform: scale(1);
 .curso-details .btn-buy {
   display: inline-block;
   padding: 8px 40px 10px 40px;
-  color: var(--accent-color);
+  color: var(--contrast-color);
   transition: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   font-family: var(--default-font);
   font-weight: 700;
+  font-variant-numeric: lining-nums;
   transition: 0.3s;
   border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .curso-details .btn-buy:hover {
@@ -1704,6 +1780,10 @@ transform: scale(1);
 
 @media (max-width: 1200px) {
   .curso-details .curso-details-slider .swiper-slide {
+    padding: 10px;
+  }
+
+  .curso-details .curso-details-slider .swiper-slide .row {
     display:flex;
     flex-direction: column-reverse;
   }
@@ -1763,7 +1843,7 @@ transform: scale(1);
 }
 
 .features .feature-box i {
-  background: var(--background-color);
+  background: var(--contrast-color);
   color: var(--accent-color);
   line-height: 0;
   padding: 4px;
@@ -1778,14 +1858,88 @@ transform: scale(1);
   padding: 0;
 }
 
+/*--------------------------------------------------------------
+# 3 COLUMNAS CHECKS
+--------------------------------------------------------------*/
+.values-checks .section-title {
+  padding-bottom: 0;
+}
+
+.values-checks .columnas-checks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.values-checks .imagen,
+.values-checks .checks {
+  margin-block-start: 3rem;
+}
+
+.values-checks .checks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.values-checks .flex-triangulo {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.values-checks .triangulo {
+  width: 0;
+  height: 100%;
+  border-top: 50px solid transparent;
+  border-left: 55px solid var(--accent-color);
+  border-bottom: 50px solid transparent;
+}
+
+.values-checks .feature-box {
+  padding: 24px 20px;
+  background-color: var(--accent-color);
+  transition: 0.3s;
+  height: 100%;
+  width: 280px;
+}
+
+.values-checks .feature-box h3 {
+  font-family: var(--default-font);
+  font-size: 15px;
+  margin: 0;
+  color: var(--default-color);
+}
+
+.values-checks .feature-box i {
+  background: var(--contrast-color);
+  color: var(--accent-color);
+  line-height: 0;
+  padding: 4px;
+  margin-right: 10px;
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.values-checks .feature-box:hover i {
+  color: var(--default-color);
+  font-size: 38px;
+  padding: 0;
+}
 
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+.faq {
+  background-image: url(../img/bg-2.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
 .faq .faq-container .faq-item {
   position: relative;
-  padding: 20px 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  padding: 25px 0 10px 0;
+  border-bottom: 2px solid var(--default-color);
   overflow: hidden;
 }
 
@@ -1794,9 +1948,10 @@ transform: scale(1);
 }
 
 .faq .faq-container .faq-item h3 {
-  font-size: 16px;
+  font-size: 24px;
+  font-variant: no-common-ligatures;
   line-height: 24px;
-  margin: 0 30px 0 0;
+  margin: 0 45px 0 0;
   transition: 0.3s;
   cursor: pointer;
   display: flex;
@@ -1827,9 +1982,10 @@ transform: scale(1);
 
 .faq .faq-container .faq-item .faq-toggle {
   position: absolute;
-  top: 20px;
+  top: 28px;
   right: 20px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold !important;
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
@@ -1840,6 +1996,7 @@ transform: scale(1);
 }
 
 .faq .faq-container .faq-active h3 {
+  font-variant-ligatures: none;
   color: var(--accent-color);
 }
 
@@ -1870,7 +2027,6 @@ transform: scale(1);
   margin-block-end: 25px;}
 
 .faq-detalle-dias .col-lg-6 {
-  background-color: var(--background-color);
   padding: 10px;
 }
 
@@ -1957,34 +2113,34 @@ transform: scale(1);
 # Portfolio Section
 --------------------------------------------------------------*/
 .fondo-2 {
-  background-image: url(../img/bg-galeria.jpg);
+  background-image: url(../img/bg-1-10.jpg);
   background-position: top;
   background-size: cover;
   margin-inline: 24px;
-  margin-block-end: 12px;
+  margin-block-end: 56px;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .portfolio .section-title {
-  background-image: url(../img/iconos-10.png);
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: color-mix(in srgb, var(--naranja), transparent 80%);
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.58);
-    padding: 30px 12px;
+  background-image: url(../img/chincheta.png), url(../img/chincheta.png);
+  background-position: top left, top right;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: rgb(210, 255, 212);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
+  padding: 30px 12px;
 }
 
 .portfolio .section-title h2, 
 .portfolio .section-title p {
-  color: white;
+  color: var(--default-color);
 }
 
 .portfolio .container-texto {
   text-align: center;
   width: 50%;
   padding: 30px;
-  margin-block-end: 60px;
+  margin-block: 60px;
   background-color: white;
 }
 
@@ -2229,10 +2385,105 @@ transform: scale(1);
 }
 
 /*--------------------------------------------------------------
-# Team Section
+# Fundadores
 --------------------------------------------------------------*/
-#team {
+
+.fundadores .section-title {
+  padding-bottom: 0;
+}
+
+.fundadores .team-member {
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  background-color: var(--accent-color);
+  padding: 15px;
+  margin-block-start: 3rem;
+}
+
+.fundadores .team-member:hover {
+  transform: scale(1.08);
+}
+
+.fundadores .team-member .pinza {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -15px;
+}
+
+.fundadores .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.fundadores .team-member .member-img:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  z-index: 1;
+}
+
+.fundadores .team-member .member-img img {
+  height: 15rem;
+}
+
+.fundadores .team-member .member-info-1 {
+  padding: 20px 15px 10px 15px;
+  background-color: var(--contrast-color);
+}
+
+.fundadores .team-member .member-info-1 h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: var(--default-font);
+  border-block-end: 3px solid var(--celeste);
+  display: inline-block;
+}
+
+.fundadores .team-member .member-info-1 span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.fundadores .team-member .member-info {
+  padding: 15px 15px 20px 15px;
+  background-color: var(--contrast-color);
+  text-align: left;
+}
+
+.fundadores .team-member .member-info p {
+  font-size: 14px;
+  line-height: 26px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+/*#team {
   background-color: color-mix(in srgb, var(--naranja), transparent 80%);
+}
+*/
+
+.team .section-title {
+  padding-bottom: 0;
+}
+
+.team .columnas-team {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .team .team-member {
@@ -2240,16 +2491,9 @@ transform: scale(1);
   text-align: center;
   transition: 0.3s;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
-  background-color: var(--naranja);
-  padding: 0 15px 15px 15px;
-}
-
-.team .team-member .pinza {
-  width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -15px;
+  background-color: var(--contrast-color);
+  padding: 15px;
+  margin-block-start: 3rem;
 }
 
 .team .team-member .member-img {
@@ -2268,20 +2512,19 @@ transform: scale(1);
   z-index: 1;
 }
 
+.team .team-member .member-img img {
+  height: 15rem;
+}
+
 .team .team-member .social {
-  position: absolute;
-  right: -100%;
-  top: 30px;
-  opacity: 0;
-  transition: 0.5s;
-  background: color-mix(in srgb, var(--accent-color), transparent 60%);
-  z-index: 2;
+  display: flex;
+  margin-block: 0 15px;
 }
 
 .team .team-member .social a {
   transition: color 0.3s;
-  color: white;
-  margin: 15px 12px;
+  color: var(--accent-color);
+  margin: 15px 12px 15px 0;
   display: block;
   line-height: 0;
   text-align: center;
@@ -2297,10 +2540,10 @@ transform: scale(1);
 
 .team .team-member .member-info-1 {
   padding: 20px 15px 10px 15px;
-  background-color: var(--background-color);
+  background-color: var(--contrast-color);
 }
 
-.team .team-member .member-info-1 h4 {
+.team .team-member .member-info h4 {
   margin-bottom: 5px;
   font-size: 18px;
   font-weight: 800;
@@ -2309,7 +2552,7 @@ transform: scale(1);
   display: inline-block;
 }
 
-.team .team-member .member-info-1 span {
+.team .team-member .member-info span {
   display: block;
   font-size: 14px;
   font-weight: 400;
@@ -2318,7 +2561,8 @@ transform: scale(1);
 
 .team .team-member .member-info {
   padding: 15px 15px 20px 15px;
-  background-color: var(--background-color);
+  background-color: var(--contrast-color);
+  text-align: left;
 }
 
 .team .team-member .member-info p {
@@ -2327,13 +2571,19 @@ transform: scale(1);
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-.team .team-member:hover {
-  transform: scale(1.08);
-}
-
 .team .team-member:hover .social {
   right: 8px;
   opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .team .team-member .member-info {
+    text-align: center;
+  }
+
+  .team .team-member .social {
+    justify-content: center;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2446,9 +2696,19 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  background-image: url(../img/hero-texto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .contact .info-item {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
+  background-color: color-mix(in srgb, var(--naranja), transparent 40%);
   padding: 30px;
+}
+
+.contact .info-item .contacto-icono {
+  height: 48px;
 }
 
 .contact .info-item i {
@@ -2458,8 +2718,7 @@ transform: scale(1);
 }
 
 .contact .info-item h3 {
-  font-size: 20px;
-  margin: 20px 0 10px 0;
+  font-size: 24px;
 }
 
 .contact .info-item p {
@@ -2467,10 +2726,11 @@ transform: scale(1);
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  font-variant-numeric: lining-nums;
 }
 
 .contact .php-email-form {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
+  background-color: var(--contrast-color);
   padding: 30px;
   height: 100%;
 }
@@ -3031,22 +3291,23 @@ transform: scale(1);
   background-position: top;
   background-size: cover;
   margin-inline: 24px;
-  margin-block-end: 12px;
+  margin-block-end: 56px 12px;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .portfolio-details-detalle .section-title{
-  background-image: url(../img/iconos-10.png);
-  background-position: top center;
-  background-size: cover;
+  background-image: url(../img/chincheta.png), url(../img/chincheta.png);
+  background-position: top left, top right;
+  background-size: 40px;
   background-repeat: no-repeat;
-  background-color: color-mix(in srgb, var(--naranja), transparent 80%);
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.58);
-  padding: 30px 12px;  margin-block-end: 50px;
+  background-color: rgb(210, 255, 255);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
+  padding: 30px 12px;
+  margin-block-end: 60px;
 }
 
 .portfolio-details-detalle .section-title p {
-  color: white;
+  color: var(--default-color);
 }
 
 .portfolio-details-detalle .portfolio-details-slider img {
@@ -3110,7 +3371,7 @@ transform: scale(1);
 }
 
 .portfolio-details-detalle .portfolio-boton {
-  background-color: var(--background-color);
+  background-color: var(--contrast-color);
   padding: 0 30px 30px 30px;
 }
 

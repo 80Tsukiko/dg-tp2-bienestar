@@ -49,7 +49,6 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Inicio<br></a></li>
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#pricing">Cursos</a></li>
@@ -116,13 +115,14 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <section id="hero" class="hero-detalle section">
 
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
               <h1 data-aos="fade-up">TOP100</h1>
-              <p>Curso presencial de fitness y bienestar integral, incluye entrenamiento físico, técnicas de yoga y enfoques de vida saludable.</p>
+              <p><span class="destacar">¡Transforma tu vida con nuestro programa exclusivo!</span><br><br>
+              Curso presencial de fitness y bienestar integral, incluye entrenamiento físico, técnicas de yoga y enfoques de vida saludable.              </p>
             </div>
             <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
               <img src="img/hero-img-2.png" class="img-fluid animated" alt="">
@@ -230,7 +230,8 @@
             </div>
           </div>
 
-          <div class="col-lg-4 portfolio-texto">            
+          <div class="col-lg-4 portfolio-texto">   
+
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <p>
                 El curso presencial diseñado para transformar tu vida a través de un enfoque integral de fitness y bienestar. Este programa exclusivo combina entrenamiento físico, técnicas de yoga y estrategias de vida saludable para ayudarte a alcanzar tus metas personales y vivir una vida más equilibrada y plena.
@@ -246,6 +247,14 @@
                 <li><strong>Costo</strong>: $5500 (incluye materiales y acceso a recursos en línea)</li>
               </ul>
             </div>
+
+            <div class="text-center portfolio-boton">
+              <a href="detalle.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>¡Comprar!</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+
           </div>
 
         </div>
@@ -311,9 +320,9 @@
 
     </section><!-- /Clients Section -->
 
-    <!-- Features Section CHECKS-->
-    <section id="features" class="features section">
-
+    <!-- 2/3 COLUMNAS CHECKS-->
+    <section id="checks" class="values-checks section">
+    
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <p>Lo que Aprenderás<br></p>
@@ -321,153 +330,74 @@
 
       <div class="container">
 
-        <div class="row gy-5">
+        <div class="columnas-checks">
 
-          <div class="col-xl-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="img/features.png" class="img-fluid" alt="">
+          <div class="imagen col-lg-4">
+            <img src="img/alt-features.png" alt="" class="img-fluid">
+          </div>
+          
+          <div class="checks col-lg-8">
+            
+            <div class="flex-triangulo" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Técnicas de Entrenamiento de Fuerza y Resistencia</h3>
+              </div>
+              <div class="triangulo"></div>
+            </div><!-- End Feature Item -->
+
+            <div class="flex-triangulo" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Técnicas de Meditación y Relajación</h3>
+              </div>
+              <div class="triangulo"></div>
+            </div><!-- End Feature Item -->
+
+            <div class="flex-triangulo" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Fundamentos del Yoga</h3>
+              </div>                
+              <div class="triangulo"></div>
+            </div><!-- End Feature Item -->
+
+            <div class="flex-triangulo" data-aos="fade-up" data-aos-delay="500">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Nutrición y Dieta Saludable</h3>
+              </div>
+              <div class="triangulo"></div>
+            </div><!-- End Feature Item -->
+
+            <div class="flex-triangulo" data-aos="fade-up" data-aos-delay="600">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Enfoques Holísticos de Vida Saludable</h3>
+              </div>
+              <div class="triangulo"></div>
+            </div><!-- End Feature Item -->
+
+            <div class="flex-triangulo" data-aos="fade-up" data-aos-delay="700">
+              <div class="feature-box d-flex align-items-center">
+                <i class="bi bi-check"></i>
+                <h3>Prevención de Lesiones y Recuperación</h3>
+              </div>
+              <div class="triangulo"></div>
+            </div><!-- End Feature Item -->
+
           </div>
 
-          <div class="col-xl-6 d-flex">
-            <div class="row align-self-center gy-4 section-detalles-checks">
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Técnicas de Entrenamiento de Fuerza y Resistencia</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Técnicas de Meditación y Relajación</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Fundamentos del Yoga</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Nutrición y Dieta Saludable</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Enfoques Holísticos de Vida Saludable</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Prevención de Lesiones y Recuperación</h3>
-                </div>
-              </div><!-- End Feature Item -->
-
-            </div>
-          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Features Section -->
-
-    <!-- Alt Features Section BENEFICIOS-->
-    <section id="alt-features" class="alt-features section">
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-7 d-flex order-2 order-xl-1" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="row align-self-center gy-5">
-
-              <div class="col-md-6 icon-box">
-                <img class="iconos" src="img/iconos-18.png" alt="">
-                <div>
-                  <h4>Transformación Integral</h4>
-                  <p>TOP100 no solo se enfoca en el fitness físico, sino también en el bienestar mental y emocional.</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <img class="iconos" src="img/iconos-19.png" alt="">
-                <div>
-                  <h4>Enfoque Personalizado</h4>
-                  <p>Cada participante recibe atención individualizada para asegurarse de que sus necesidades y objetivos específicos sean atendidos.</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <img class="iconos" src="img/iconos-20.png" alt="">
-                <div>
-                  <h4>Descuentos</h4>
-                  <p>Descuentos en equipamiento deportivo y productos de salud, así como acceso a sesiones especiales con expertos en entrenamiento y bienestar.</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <img class="iconos" src="img/iconos-21.png" alt="">
-                <div>
-                  <h4>Expertos Calificados</h4>
-                  <p>Nuestro equipo está compuesto por entrenadores certificados, instructores de yoga experimentados y nutricionistas profesionales dedicados a tu éxito.</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <img class="iconos" src="img/iconos-22.png" alt="">
-                <div>
-                  <h4>Certificado</h4>
-                  <p>Recibirás un certificado que avala tus conocimientos y habilidades en fitness y bienestar integral.</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-              <div class="col-md-6 icon-box">
-                <img class="iconos" src="img/iconos-23.png" alt="">
-                <div>
-                  <h4>Eventos de Fitness</h4>
-                  <p>Invitaciones exclusivas para participar en eventos de fitness, y pasarás a formar parte de un ranking global de atletas no profesionales</p>
-                </div>
-              </div><!-- End Feature Item -->
-
-            </div>
-
-          </div>
-
-          <div class="col-xl-5 d-flex align-items-center order-1 order-xl-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/alt-features.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Alt Features Section -->
-    
-    <!-- FRASE Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <p>¡No esperes más para empezar tu transformación!<br>
-        Inscríbete ahora y asegura tu lugar en el curso TOP100.</p>
-        
-      </div>
-
-    </section><!-- /Stats Section -->
+    </section> 
+    <!-- /Values Section -->
 
     <!-- TEMAS Y DIAS Section -->
-    <section id="faq" class="faq-detalle section"> 
+    <section id="faq" class="faq-detalle-dias section"> 
 
       <!-- Section Title -->
       
@@ -485,7 +415,7 @@
             <div class="faq-container">
 
               <div class="faq-item faq-active">
-                <h3>1. Introducción y Evaluación Inicial</h3>
+                <h3>1. Introducción al Fitness y Bienestar Integral</h3>
                 <div class="faq-content">
                   <p><b>Objetivos:</b><br>
                     
@@ -502,10 +432,9 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
               <!-- End Faq item-->
-
               
               <div class="faq-item">
-                <h3>2. Entrenamiento de Fuerza y Resistencia</h3>
+                <h3>2. Principios del Entrenamiento Físico</h3>
                 <div class="faq-content">
                   <p>
                     <b>Objetivos: </b><br>
@@ -522,10 +451,9 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
               <!-- End Faq item-->
-
               
               <div class="faq-item">
-                <h3>3. Yoga Restaurativo y Pranayama</h3>
+                <h3>3. Técnicas de Entrenamiento de Fuerza y Resistencia</h3>
                 <div class="faq-content">
                   <p>
                     <b>Objetivos: </b><br>
@@ -544,19 +472,8 @@
               </div>
               <!-- End Faq item-->
             
-            
-            </div>
-
-          </div>
-          <!-- End Faq Column-->
-
-          
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-
               <div class="faq-item">
-                <h3>4. Nutrición y Planificación de Comidas Saludables</h3>
+                <h3>4. Cardio y Ejercicios Aeróbicos</h3>
                 <div class="faq-content">
                   <p>
                     <b>Objetivos: </b><br>
@@ -575,10 +492,9 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
               <!-- End Faq item-->
-
               
               <div class="faq-item">
-                <h3>5. Estrategias de Vida Saludable y Gestión del Estrés</h3>
+                <h3>5. Fundamentos del Yoga</h3>
                 <div class="faq-content">
                   <p>
                     <b>Objetivos: </b><br>
@@ -596,9 +512,19 @@
               </div>
               <!-- End Faq item-->
 
+            
+            </div>
+
+          </div>
+          <!-- End Faq Column-->
+
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
               
               <div class="faq-item">
-                <h3>6. Ejercicio al Aire Libre y Conexión con la Naturaleza</h3>
+                <h3>6. Técnicas de Meditación y Relajación</h3>
                 <div class="faq-content">
                   <p>
                     <b>Objetivos: </b><br>
@@ -618,7 +544,90 @@
               </div>
               <!-- End Faq item-->
 
-            
+              <div class="faq-item">
+                <h3>7. Nutrición y Dieta Saludable</h3>
+                <div class="faq-content">
+                  <p>
+                    <b>Objetivos: </b><br>
+                    
+                    - Promover la actividad física en un entorno natural. <br>
+                    - Fomentar la conexión con la naturaleza como parte del bienestar integral. <br><br>
+                    <b>Contenido: </b><br>
+                    
+                    - Encuentro en un Parque Local: Explicación de la importancia del ejercicio al aire libre y sus beneficios para la salud mental y física. <br>
+                    - Caminata y Ejercicios de Calentamiento: Actividades de calentamiento dinámico para preparar el cuerpo. <br>
+                    - Estaciones de ejercicios que utilizan el entorno natural, como bancos, árboles y colinas para ejercicios de fuerza y resistencia (sentadillas, flexiones, saltos, y escaladas). <br>
+                    - Sesión de Yoga al Aire Libre: Posturas de yoga adaptadas para el entorno exterior, enfocadas en la conexión con el entorno y la respiración consciente. <br>
+                    - Entrega de Recursos: Folleto con rutas de caminatas locales, ejercicios para realizar en el parque y consejos para mantenerse activo al aire libre.
+                    </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>8. Enfoques Holísticos de Vida Saludable</h3>
+                <div class="faq-content">
+                  <p>
+                    <b>Objetivos: </b><br>
+                    
+                    - Promover la actividad física en un entorno natural. <br>
+                    - Fomentar la conexión con la naturaleza como parte del bienestar integral. <br><br>
+                    <b>Contenido: </b><br>
+                    
+                    - Encuentro en un Parque Local: Explicación de la importancia del ejercicio al aire libre y sus beneficios para la salud mental y física. <br>
+                    - Caminata y Ejercicios de Calentamiento: Actividades de calentamiento dinámico para preparar el cuerpo. <br>
+                    - Estaciones de ejercicios que utilizan el entorno natural, como bancos, árboles y colinas para ejercicios de fuerza y resistencia (sentadillas, flexiones, saltos, y escaladas). <br>
+                    - Sesión de Yoga al Aire Libre: Posturas de yoga adaptadas para el entorno exterior, enfocadas en la conexión con el entorno y la respiración consciente. <br>
+                    - Entrega de Recursos: Folleto con rutas de caminatas locales, ejercicios para realizar en el parque y consejos para mantenerse activo al aire libre.
+                    </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>9. Prevención de Lesiones y Recuperación</h3>
+                <div class="faq-content">
+                  <p>
+                    <b>Objetivos: </b><br>
+                    
+                    - Promover la actividad física en un entorno natural. <br>
+                    - Fomentar la conexión con la naturaleza como parte del bienestar integral. <br><br>
+                    <b>Contenido: </b><br>
+                    
+                    - Encuentro en un Parque Local: Explicación de la importancia del ejercicio al aire libre y sus beneficios para la salud mental y física. <br>
+                    - Caminata y Ejercicios de Calentamiento: Actividades de calentamiento dinámico para preparar el cuerpo. <br>
+                    - Estaciones de ejercicios que utilizan el entorno natural, como bancos, árboles y colinas para ejercicios de fuerza y resistencia (sentadillas, flexiones, saltos, y escaladas). <br>
+                    - Sesión de Yoga al Aire Libre: Posturas de yoga adaptadas para el entorno exterior, enfocadas en la conexión con el entorno y la respiración consciente. <br>
+                    - Entrega de Recursos: Folleto con rutas de caminatas locales, ejercicios para realizar en el parque y consejos para mantenerse activo al aire libre.
+                    </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>10. Proyecto Final y Evaluación</h3>
+                <div class="faq-content">
+                  <p>
+                    <b>Objetivos: </b><br>
+                    
+                    - Promover la actividad física en un entorno natural. <br>
+                    - Fomentar la conexión con la naturaleza como parte del bienestar integral. <br><br>
+                    <b>Contenido: </b><br>
+                    
+                    - Encuentro en un Parque Local: Explicación de la importancia del ejercicio al aire libre y sus beneficios para la salud mental y física. <br>
+                    - Caminata y Ejercicios de Calentamiento: Actividades de calentamiento dinámico para preparar el cuerpo. <br>
+                    - Estaciones de ejercicios que utilizan el entorno natural, como bancos, árboles y colinas para ejercicios de fuerza y resistencia (sentadillas, flexiones, saltos, y escaladas). <br>
+                    - Sesión de Yoga al Aire Libre: Posturas de yoga adaptadas para el entorno exterior, enfocadas en la conexión con el entorno y la respiración consciente. <br>
+                    - Entrega de Recursos: Folleto con rutas de caminatas locales, ejercicios para realizar en el parque y consejos para mantenerse activo al aire libre.
+                    </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <!-- End Faq item-->
+
             </div>
 
           </div>
@@ -631,6 +640,117 @@
 
     </section>
     <!--End Faq Section-->
+
+    <!-- FRASE Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <p>¡No esperes más para empezar tu transformación!<br>
+        Inscríbete ahora y asegura tu lugar en el curso TOP100.</p>
+        
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Alt Features Section BENEFICIOS-->
+    <section id="alt-features" class="alt-features section">
+
+      <div class="container">
+
+        <div class="row gy-5">
+    
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="icon-box">
+              <img class="iconos" src="img/iconos-18.png" alt="">
+              <div>
+                <h4>Transformación Integral</h4>
+                <p>TOP100 no solo se enfoca en el fitness físico, sino también en el bienestar mental y emocional.</p>
+              </div>
+            </div><!-- End Feature Item -->
+
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="icon-box">
+              <img class="iconos" src="img/iconos-19.png" alt="">
+              <div>
+                <h4>Enfoque Personalizado</h4>
+                <p>Cada participante recibe atención individualizada para asegurarse de que sus necesidades y objetivos sean atendidos.</p>
+              </div>
+            </div><!-- End Feature Item -->
+
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="icon-box">
+              <img class="iconos" src="img/iconos-20.png" alt="">
+              <div>
+                <h4>Descuentos</h4>
+                <p>Descuentos en equipamiento deportivo y productos de salud, además de acceso a sesiones especiales con expertos.</p>
+              </div>
+            </div><!-- End Feature Item -->
+
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            
+            <div class="icon-box">
+              <img class="iconos" src="img/iconos-23.png" alt="">
+              <div>
+                <h4>Eventos de Fitness</h4>
+                <p>Invitaciones exclusivas para participar en eventos, y pasarás a formar parte de un ranking global de atletas no profesionales.</p>
+              </div>
+            </div><!-- End Feature Item -->
+
+          </div><!-- End Team Member -->
+
+
+
+    
+
+        </div>
+
+      </div>
+
+    </section><!-- /Alt Features Section -->
+    
+    <!-- About CERTIFICADO -->
+    <section id="certificado" class="certificado section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="img/about.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h2>¡Recibí tu Certificado!</h2>
+              <p>
+                Recibirás un certificado que avala <span class="destacar">tus conocimientos y habilidades en fitness y bienestar integral</span> y te brinda numerosos beneficios: <br>
+                <b>- Reconocimiento Profesional:</b> Demuestra tu compromiso con un estilo de vida saludable y abre puertas a oportunidades en el campo del fitness y el bienestar. <br> 
+                <b>- Crecimiento Personal:</b> Refleja tu progreso y la adquisición de conocimientos que puedes aplicar en tu vida diaria para mantener una salud óptima. <br>
+                <b>- Credibilidad:</b> Aumenta tu credibilidad como promotor del bienestar, ya sea para inspirar a tu familia o en tu comunidad. <br>
+                <b>- Desarrollo de Habilidades:</b> Mejora tus habilidades en áreas como nutrición, ejercicio y manejo del estrés, fortaleciendo tu capacidad para mantener un equilibrio integral. <br><br>
+                Con este certificado, estarás equipado para liderar con el ejemplo y fomentar una cultura de bienestar en tu entorno.
+              <div class="text-center text-lg-start">
+                <a href="detalle.html" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>¡Comprar!</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section">
@@ -673,66 +793,30 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/pinza-papel-2.png" alt="">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
                 <p>"Nuestro tiempo en el centro ha sido transformador. Participamos en las clases de yoga en familia y no solo mejoramos nuestra salud, sino que también fortalecimos nuestra conexión como familia. ¡Altamente recomendado!"
                 </p>
-                <div class="profile mt-auto">
-                  <img src="img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Ana y Carlos S.</h3>
-                  <h4>Pareja</h4>
-                </div>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/pinza-papel-2.png" alt="">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
                 <p>"Los talleres de nutrición saludable han cambiado por completo nuestra forma de comer. Aprendimos a preparar comidas deliciosas y nutritivas que a todos nos encantan. ¡Gracias al equipo por su dedicación y apoyo!"
                 </p>
-                <div class="profile mt-auto">
-                  <img src="img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Laura M.</h3>
-                  <h4>Madre de 3 hijos</h4>
-                </div>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">                
-                <img src="img/pinza-papel-2.png" alt="">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
                 <p>
                   "La comunicación en casa ha mejorado muchísimo gracias al curso de comunicación efectiva. Ahora resolvemos nuestros conflictos de manera pacífica y comprensiva. Estamos muy agradecidos por las herramientas que nos han proporcionado."
                 </p>
-                <div class="profile mt-auto">
-                  <img src="img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Familia García</h3>
-                  <h4>Padres con 2 hijas</h4>
-                </div>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="img/pinza-papel-2.png" alt="">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
                 <p>"Las actividades físicas en familia son súper divertidas. Mis hijos y yo esperamos con ansias cada sesión, ¡y hemos notado una gran mejora en nuestra condición física! El ambiente es siempre positivo y motivador."
                 </p>
-                <div class="profile mt-auto">
-                  <img src="img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Javier R.</h3>
-                  <h4>Padre de 2 hijo</h4>
-                </div>
               </div>
             </div><!-- End testimonial item -->
 
@@ -743,101 +827,138 @@
       </div>
 
     </section><!-- /Testimonials Section -->
-        
-    <!-- Team Section -->
-    <section id="team" class="team section">
 
+    <!-- 2/3 COLUMNAS TEAM-->
+    <section id="team" class="team section">
+    
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Equipo</h2>
-        <p>Los Mejores Profesionales para Ayudarlos</p>
+        <p>Los Mejores Profesionales para Ayudarlos</p>      
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="team-member">
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="img/team/team-1.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
+          <div class="columnas-team">
+
+            <div class="member-img col-lg-4">
+              <img src="img/team/team-1.png" class="img-fluid" alt="">
+            </div>
+            
+            <div class="seccion-team col-lg-8">
+
               <div class="member-info">
                 <h4>Luis García</h4>
                 <span>Nutricionista</span>
-                <p>Experto en nutrición con una pasión por educar a las familias sobre hábitos alimenticios saludables. Sus talleres y consultas individuales han transformado la dieta y el bienestar de muchas de nuestras familias, promoviendo una vida más saludable y equilibrada.</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="img/team/team-2.png" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
+                <p>Experto en nutrición con una pasión por educar a las familias sobre hábitos alimenticios saludables. Sus talleres y consultas individuales han transformado la dieta y el bienestar de muchas de nuestras familias, promoviendo una vida más saludable y equilibrada.</p>
               </div>
+
+            </div>
+
+
+          </div>
+
+        </div><!-- End Team Member -->
+        
+        <div class="team-member">
+
+          <div class="columnas-team">
+
+            <div class="member-img col-lg-4">
+              <img src="img/team/team-2.png" class="img-fluid" alt="">
+            </div>
+            
+            <div class="seccion-team col-lg-8">
+
               <div class="member-info">
                 <h4>Dra. María Fernández</h4>
                 <span>Psicóloga Familiar</span>
-                <p>Más de 15 años de experiencia en terapia familiar, se especializa en ayudar a las familias a mejorar su comunicación y resolver conflictos. Su enfoque empático y personalizado ha sido fundamental para el bienestar emocional de nuestras familias.</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="img/team/team-3.png" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
+                <p>Más de 15 años de experiencia en terapia familiar, se especializa en ayudar a las familias a mejorar su comunicación y resolver conflictos. Su enfoque empático y personalizado ha sido fundamental para el bienestar emocional de nuestras familias.</p>
               </div>
+
+            </div>
+
+
+          </div>
+
+        </div><!-- End Team Member -->
+
+        <div class="team-member">
+
+          <div class="columnas-team">
+
+            <div class="member-img col-lg-4">
+              <img src="img/team/team-3.png" class="img-fluid" alt="">
+            </div>
+            
+            <div class="seccion-team col-lg-8">
+
               <div class="member-info">
                 <h4>Carlos Sánchez</h4>
                 <span>Entrenador Personal y Coach de Fitness</span>
-                <p>Un entrenador certificado que se dedica a ayudar a las familias a incorporar la actividad física en su vida diaria de manera divertida y efectiva. Sus clases dinámicas y motivadoras han sido clave para mejorar la condición física y el bienestar general de nuestros miembros.</p>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="img/team/team-4.png" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
+                <p>Un entrenador certificado que se dedica a ayudar a las familias a incorporar la actividad física en su vida diaria de manera divertida y efectiva. Sus clases dinámicas y motivadoras han sido clave para mejorar la condición física y el bienestar general de nuestros miembros.</p>
               </div>
+
+            </div>
+
+
+          </div>
+
+        </div><!-- End Team Member -->
+
+        <div class="team-member">
+
+          <div class="columnas-team">
+
+            <div class="member-img col-lg-4">
+              <img src="img/team/team-4.png" class="img-fluid" alt="">
+            </div>
+            
+            <div class="seccion-team col-lg-8">
+
               <div class="member-info">
                 <h4>Ana López</h4>
                 <span>Instructora de Yoga y Meditación</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
                 <p>Guía a las familias a través de prácticas que fomentan la relajación, la conexión y la salud física. Su enfoque inclusivo asegura que todos los miembros de la familia, independientemente de su nivel, se sientan cómodos y beneficiados.</p>
               </div>
-            </div>
-          </div><!-- End Team Member -->
 
-        </div>
+            </div>
+
+
+          </div>
+
+        </div><!-- End Team Member -->
 
       </div>
 
-    </section><!-- /Team Section -->
+    </section> 
+    <!-- /Values Section -->
 
     <!-- FAQ Section -->
     <section id="faq" class="faq section"> 
@@ -857,7 +978,7 @@
 
             <div class="faq-container">
 
-              <div class="faq-item faq-active">
+              <div class="faq-item">
                 <h3>¿Qué servicios ofrece el Centro de Bienestar Familiar?</h3>
                 <div class="faq-content">
                   <p>Ofrecemos una variedad de servicios que incluyen entrenamiento físico, clases de yoga y meditación, nutrición y planificación de comidas, terapias holísticas, programas para niños y mucho más. Nuestro objetivo es proporcionar un enfoque integral para el bienestar de toda la familia.</p>
@@ -886,16 +1007,6 @@
               </div>
               <!-- End Faq item-->
             
-            
-            </div>
-
-          </div>
-          <!-- End Faq Column-->
-
-          
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
 
               <div class="faq-item">
                 <h3>¿Los programas están diseñados para todas las edades?</h3>
@@ -935,12 +1046,20 @@
           <!-- End Faq Column-->
 
           
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+
+            <img src="img/preguntas.png" class="img-fluid" alt="">
+            
+          </div>
+          <!-- End Faq Column-->
+
+          
         </div>
 
       </div>
 
     </section>
-    <!--End Faq Section-->    
+    <!--End Faq Section-->
 
     <!-- CURSOS Section -->    
     <!-- Portfolio Details Section RESUMEN-->
@@ -948,7 +1067,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>CURSOS</h2>
+        <h2>CURSOS</h2> <br>
         <p>Aprende y Crece en Familia</p>
       </div><!-- End Section Title -->
             
