@@ -11,13 +11,12 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --default-font: "Raleway", "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Patrick Hand SC", "Nunito",  sans-serif;
+  --heading-font: "Urbanist", "Nunito",  sans-serif;
   --nav-font: "Raleway",  sans-serif;
 }
 
@@ -519,7 +518,8 @@ p {
 }
 
 .footer .footer-newsletter h4 {
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .footer .footer-newsletter .newsletter-form {
@@ -646,10 +646,10 @@ p {
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 17px;
   position: relative;
   padding-bottom: 12px;
-  font-family: var(--default-font);
+  font-family: var(--heading-font);
 }
 
 .footer .footer-links {
@@ -847,7 +847,7 @@ section,
   margin: 10px 0 0 0;
   font-size: 38px;
   font-family: var(--heading-font);
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .section-title p .description-title {
@@ -927,9 +927,9 @@ section,
 
 .hero h1 {
   margin: 0;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 62px;
+  font-size: 49px;
+  font-weight: 900;
+  line-height: 57px;
   font-variant-ligatures: none;
 }
 
@@ -950,6 +950,8 @@ section,
 }
 
 .hero .destacar {
+  font-size: 49px;
+  font-weight: 900;
   text-decoration-line: underline;
   text-decoration-color: var(--accent-color);
   border: 0;
@@ -1215,7 +1217,7 @@ section,
 
 .about .content h2 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1;
 }
 
@@ -1250,10 +1252,10 @@ section,
 
 .certificado .content h2 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1;
   background-color: var(--contrast-color);
-  padding: 15px;
+  padding: 20px;
   font-variant-ligatures: none;
 }
 
@@ -1261,7 +1263,7 @@ section,
   margin: 15px 0 30px 0;
   line-height: 24px;
   background-color: var(--contrast-color);
-  padding: 15px;
+  padding: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -1291,7 +1293,8 @@ transform: scale(1.1);
 }
 
 .values .card h3 {
-font-size: 24px;
+font-size: 24px;    
+font-weight: 800;
 margin-bottom: 18px;
 }
 
@@ -1534,6 +1537,7 @@ transform: scale(1);
 }
 
 .curso-details .section-title p {
+  font-weight: 900;
   display: inline;
   border-bottom: 5px solid var(--celeste);
 }
@@ -1948,7 +1952,8 @@ transform: scale(1);
 }
 
 .faq .faq-container .faq-item h3 {
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: 700;
   font-variant: no-common-ligatures;
   line-height: 24px;
   margin: 0 45px 0 0;
@@ -2043,7 +2048,8 @@ transform: scale(1);
 }
 
 .faq-detalle-dias .faq-container .faq-item h3 {
-  font-size: 22px;
+  font-size: 19px;
+  font-weight: 800;
   line-height: 24px;
   margin: 0;
   transition: 0.3s;
@@ -2718,7 +2724,9 @@ transform: scale(1);
 }
 
 .contact .info-item h3 {
-  font-size: 24px;
+  font-size: 21px;
+  font-weight: 700;
+  margin-block: 5px;
 }
 
 .contact .info-item p {
