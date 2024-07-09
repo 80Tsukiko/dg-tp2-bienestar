@@ -27,10 +27,10 @@
   --heading-color:#3a3628; /* e3bb2f -- Color for headings, subheadings and title throughout the website */
   --accent-color: #fbcd26; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
-  --celeste: rgb(93, 217, 245);
-  --rosa: rgb(233, 121, 195);
-  --naranja: #f5c746;
-  --verde:rgb(110, 218, 171);
+  --celeste: #a0dfed;;
+  --rosa: rgb(245 151 213);;
+  --naranja: #ffd86a;
+  --verde:rgb(149 231 195);
   --degradado: linear-gradient(to right, #f89b29, #ff7f36, #ff6049, #ff3d61, #ff0f7b);
 }
 
@@ -1053,15 +1053,26 @@ section,
 --------------------------------------------------------------*/
 .hero-detalle {
   width: 100%;
-  min-height: 100vh;
   position: relative;
-  padding: 80px 0 60px 0;
+  padding: 120px 0 0 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.jpg);
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  background-image: url(../img/bg-4.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-detalle .container-texto {
+  text-align: center;
+  width: 75%;
+  padding: 30px;
+  margin-block: 30px 15px;
+  background-color: var(--rosa);    
+  background-image: url(../img/chincheta.png), url(../img/chincheta.png);
+  background-position: top left, top right;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .hero-detalle .order-2 {
@@ -1099,12 +1110,12 @@ section,
 
 .hero-detalle .destacar {
   text-decoration-line: underline;
-  text-decoration-color: var(--accent-color);
+  text-decoration-color: var(--default-color);
   border: 0;
+  font-size: 20px;
 }
 
 .hero-detalle p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin: 20px 0 30px 0;
   font-size: 20px;
   font-weight: 600;
@@ -1272,17 +1283,23 @@ section,
 
 .values {
   padding: 0;
+  background-color: var(--background-color);
+  background-image: url(../img/bg-5.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .values .card {
-background-color: var(--background-color);
+background-color: var(--naranja);
 color: var(--default-color);
 padding: 30px;
-box-shadow: 0px 0 10px color-mix(in srgb, var(--default-color), transparent 92%);
+box-shadow: -4px 4px 6px 0px color-mix(in srgb, var(--default-color), transparent 92%);
 text-align: center;
 transition: 0.3s;
 height: 336px;
 border: 0;
+border-radius: 0;
 margin: 50px;
 }
 
