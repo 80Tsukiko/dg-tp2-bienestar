@@ -12,26 +12,24 @@
 --------------------------------------------------------------*/
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
 :root {
   --default-font: "Raleway", "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Urbanist", "Nunito",  sans-serif;
+  --heading-font: "Truculenta", "Nunito",  sans-serif;
   --nav-font: "Raleway",  sans-serif;
 }
 
 /*  Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #f5f5f5; /* Background color for the entire website, including individual sections */
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color:#3a3628; /* e3bb2f -- Color for headings, subheadings and title throughout the website */
-  --accent-color: #fbcd26; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #f7c100; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
-  --celeste: #a0dfed;;
-  --rosa: rgb(245 151 213);;
+  --celeste: #a0dfed;
+  --rosa: #a0dfed;/* rgb(245 151 213)*/
   --naranja: #ffd86a;
-  --verde:rgb(149 231 195);
-  --degradado: linear-gradient(to right, #f89b29, #ff7f36, #ff6049, #ff3d61, #ff0f7b);
+  --verde:#a0dfed;/*rgb(149 231 195)*/
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -58,13 +56,12 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--nav-color);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
 
@@ -100,20 +97,17 @@ p {
 }
 
 .destacar {
-  font-weight: 600;
-  border-bottom: 2px solid var(--accent-color);
+  font-weight: 900;
 }
 
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  background-color: white;
   color: var(--default-color);
   padding: 20px 0 15px 0;
   transition: all 0.5s;
   z-index: 997;
-  box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .header .logo {
@@ -134,8 +128,8 @@ p {
 
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
-  color: var(--default-color);
-  background: var(--accent-color);
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
   font-size: 15px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
@@ -146,8 +140,8 @@ p {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--default-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
 .header .boton-secundario {
@@ -506,20 +500,24 @@ p {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--naranja);
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
 }
 
 .footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  background-image: url(../img/bg-papel.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
   padding: 50px 0;
 }
 
 .footer .footer-newsletter h4 {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  padding-block-start: 25px;
 }
 
 .footer .footer-newsletter .newsletter-form {
@@ -562,7 +560,7 @@ p {
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
 .footer .footer-newsletter .error-message {
@@ -631,22 +629,18 @@ p {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   font-size: 16px;
-  color: var(--accent-color);
+  color: var(--heading-color);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: var(--nav-color);
 }
 
 .footer h4 {
-  font-size: 17px;
+  font-size: 20px;
   position: relative;
   padding-bottom: 12px;
   font-family: var(--heading-font);
@@ -666,7 +660,6 @@ p {
   margin-right: 3px;
   font-size: 12px;
   line-height: 0;
-  color: var(--accent-color);
 }
 
 .footer .footer-links ul li {
@@ -683,10 +676,11 @@ p {
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   line-height: 1;
+  font-weight: 500;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--nav-color);
 }
 
 .footer .footer-about a {
@@ -739,7 +733,7 @@ p {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
   color: var(--contrast-color);
 }
 
@@ -882,6 +876,7 @@ section,
 
 .btn-read-more:hover {
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
 .btn-read-more:hover i {
@@ -893,11 +888,13 @@ section,
 .about .btn-read-more:hover {
   color: var(--background-color);
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
 .curso-details .btn-read-more:hover {
   color: var(--background-color);
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
 /*--------------------------------------------------------------
@@ -910,19 +907,19 @@ section,
   padding: 80px 0 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/iconos-30.png), url(../img/hero-bg.jpg);
-  background-position: right bottom, right bottom;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
+  background: url(../img/hero-bg.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .order-1 img {
+  opacity: 0;
 }
 
 .hero .order-2 {
   padding: 30px;
   margin-block-start: 50px;
-  background-image: url(../img/hero-texto.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 5px solid var(--heading-color);
 }
 
 .hero h1 {
@@ -930,7 +927,7 @@ section,
   font-size: 49px;
   font-weight: 900;
   line-height: 57px;
-  font-variant-ligatures: none;
+  /*font-variant-ligatures: none;*/
 }
 
 .hero .volanta {
@@ -978,7 +975,6 @@ section,
   transition: 0.5s;
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(1deg);
-
 }
 
 .hero .btn-get-started i {
@@ -989,6 +985,7 @@ section,
 
 .hero .btn-get-started:hover {
   box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
   transform: rotate(0deg);
 }
 
@@ -1072,7 +1069,6 @@ section,
   background-position: top left, top right;
   background-size: 40px;
   background-repeat: no-repeat;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .hero-detalle .order-2 {
@@ -1242,11 +1238,13 @@ section,
 # CERTIFICADO
 --------------------------------------------------------------*/
 .certificado {
-  background-color: var(--celeste);
-  background-image: url(../img/bg-3.png);
-  background-position: top left;
+  background-color: var(--naranja);
+  background-image: url(../img/chincheta.png), url(../img/bg-papel.png);
+  background-position: top center, top left;
+  background-size: 55px, contain;
   background-repeat: no-repeat;
-  background-size: auto;
+  margin-block: 16px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .certificado .content {
@@ -1265,7 +1263,6 @@ section,
   font-size: 32px;
   font-weight: 800;
   line-height: 1;
-  background-color: var(--contrast-color);
   padding: 20px;
   font-variant-ligatures: none;
 }
@@ -1273,7 +1270,6 @@ section,
 .certificado .content p {
   margin: 15px 0 30px 0;
   line-height: 24px;
-  background-color: var(--contrast-color);
   padding: 20px;
 }
 
@@ -1294,19 +1290,18 @@ section,
 background-color: var(--naranja);
 color: var(--default-color);
 padding: 30px;
-box-shadow: -4px 4px 6px 0px color-mix(in srgb, var(--default-color), transparent 92%);
+box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 text-align: center;
 transition: 0.3s;
-height: 336px;
 border: 0;
 border-radius: 0;
 margin: 50px;
 }
 
 .values .card img {
-padding: 30px 40px;
+padding: 15px 40px 30px 40px;
 transition: 0.5s;
-transform: scale(1.1);
+transform: scale(1);
 }
 
 .values .card h3 {
@@ -1315,20 +1310,8 @@ font-weight: 800;
 margin-bottom: 18px;
 }
 
-.values .card-rosa:hover {
-  background-color: color-mix(in srgb, var(--rosa), transparent 80%);
-}
-
-.values .card-celeste:hover {
-  background-color: color-mix(in srgb, var(--celeste), transparent 80%);
-}
-
-.values .card-verde:hover {
-  background-color: color-mix(in srgb, var(--verde), transparent 80%);
-}
-
 .values .card:hover img {
-transform: scale(1);
+transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -1387,10 +1370,6 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Alt Features Section
 --------------------------------------------------------------*/
-.features {
-  background-color: var(--contrast-color);
-}
-
 .alt-features .icon-box {
   display: flex;
 }
@@ -1427,7 +1406,7 @@ transform: scale(1);
 
 .services .section-title p {
   color: var(--default-color);
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .services .section-title h2 {
@@ -1466,9 +1445,9 @@ transform: scale(1);
 }
 
 .services .service-item h3 {
-  font-family: var(--default-font);
-  font-size: 17px;
-  font-weight: 800;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 900;
 }
 
 .services .service-item .read-more {
@@ -1488,8 +1467,8 @@ transform: scale(1);
 
 /*-----------ROSA-----------*/
 .services .service-item.item-cyan {
-  background-color: color-mix(in srgb, var(--naranja), transparent 40%);
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  background-color: var(--naranja);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 80%);
   transform: rotate(1deg);
 }
 
@@ -1505,8 +1484,8 @@ transform: scale(1);
 
 /*-----------CELESTE-----------*/
 .services .service-item.item-orange {
-  background-color: color-mix(in srgb, var(--naranja), transparent 40%);
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  background-color: var(--naranja);
+  box-shadow: 4px 4px 4px 0px color-mix(in srgb, black, transparent 80%);
   transform: rotate(-1deg);
 }
 
@@ -1535,7 +1514,7 @@ transform: scale(1);
   background-color: var(--contrast-color);
   margin-inline: 24px;
   margin-block: 56px 12px;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .curso-details .section-title {
@@ -1543,8 +1522,8 @@ transform: scale(1);
   background-position: top left, top right;
   background-size: 40px;
   background-repeat: no-repeat;
-  background-color: rgb(210 238 255);
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
+  background-color: var(--celeste);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 60%);
   padding: 30px 12px;
 }
 
@@ -1556,7 +1535,6 @@ transform: scale(1);
 .curso-details .section-title p {
   font-weight: 900;
   display: inline;
-  border-bottom: 5px solid var(--celeste);
 }
 
 .curso-details .curso-details-slider .swiper-slide {
@@ -1595,26 +1573,29 @@ transform: scale(1);
 }
 
 .curso-details .curso-details-slider .cursos-texto .color-azul {
-  font-family: var(--default-font);
+  font-family: var(--heading-font);
   font-weight: 800;
+  font-size: 32px;
   color: var(--default-color);
-  border-bottom: 4px solid var(--celeste);
+  border-bottom: 4px solid var(--naranja);
   display: inline;
 }
 
 .curso-details .curso-details-slider .cursos-texto .color-rosa {
-  font-family: var(--default-font);
+  font-family: var(--heading-font);
   font-weight: 800;
+  font-size: 32px;
   color: var(--default-color);
-  border-bottom: 4px solid var(--rosa);
+  border-bottom: 4px solid var(--naranja);
   display: inline;
 }
 
 .curso-details .curso-details-slider .cursos-texto .color-verde {
-  font-family: var(--default-font);
+  font-family: var(--heading-font);
   font-weight: 800;
+  font-size: 32px;
   color: var(--default-color);
-  border-bottom: 4px solid var(--verde);
+  border-bottom: 4px solid var(--naranja);
   display: inline;
 }
 
@@ -1647,6 +1628,7 @@ transform: scale(1);
 .curso-details .curso-details-slider img {
   width: 100%;
   transition: 0.3s;
+  padding: 15px 15px 15px 0;
 }
 
 .curso-details .btn-buy {
@@ -1665,7 +1647,7 @@ transform: scale(1);
 }
 
 .curso-details .btn-buy:hover {
-  background-color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
   color: var(--contrast-color);
 }
 
@@ -1843,17 +1825,17 @@ transform: scale(1);
   width: 0;
   height: 100%;
   border-top: 50px solid transparent;
-  border-left: 55px solid var(--accent-color);
+  border-left: 55px solid var(--naranja);
   border-bottom: 50px solid transparent;
 }
 
 .features .feature-box {
   padding: 24px 20px;
-  background-color: var(--accent-color);
+  background-color: var(--naranja);
   transition: 0.3s;
   height: 100%;
   width: 280px;
-  
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .features .feature-box h3 {
@@ -1912,16 +1894,17 @@ transform: scale(1);
   width: 0;
   height: 100%;
   border-top: 50px solid transparent;
-  border-left: 55px solid var(--accent-color);
+  border-left: 55px solid var(--naranja);
   border-bottom: 50px solid transparent;
 }
 
 .values-checks .feature-box {
   padding: 24px 20px;
-  background-color: var(--accent-color);
+  background-color: var(--naranja);
   transition: 0.3s;
   height: 100%;
   width: 280px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .values-checks .feature-box h3 {
@@ -1950,13 +1933,6 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq {
-  background-image: url(../img/bg-2.png);
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
-
 .faq .faq-container .faq-item {
   position: relative;
   padding: 25px 0 10px 0;
@@ -1969,7 +1945,7 @@ transform: scale(1);
 }
 
 .faq .faq-container .faq-item h3 {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 700;
   font-variant: no-common-ligatures;
   line-height: 24px;
@@ -2037,12 +2013,6 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Faq Section TEMAS Y DIAS
 --------------------------------------------------------------*/
-.faq-detalle-dias {
-  background-image: url(../img/hero-texto.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .faq-detalle-dias .section-title {
   background-color: var(--background-color);
   padding: 15px 0 15px 0;
@@ -2074,7 +2044,7 @@ transform: scale(1);
   display: flex;
   align-items: center;
   padding: 20px 20px 10px 20px;
-  color: var(--rosa);
+  background-color: var(--rosa);
 }
 
 .faq-detalle-dias .faq-container .faq-item h3 .num {
@@ -2083,7 +2053,7 @@ transform: scale(1);
 }
 
 .faq-detalle-dias .faq-container .faq-item h3:hover {
-  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--celeste) 90%, black);
 }
 
 .faq-detalle-dias .faq-container .faq-item .faq-content {
@@ -2107,7 +2077,6 @@ transform: scale(1);
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
-  color: var(--rosa);
 }
 
 .faq-detalle-dias .faq-container .faq-item .faq-toggle:hover {
@@ -2116,7 +2085,7 @@ transform: scale(1);
 
 .faq-detalle-dias .faq-container .faq-active h3 {
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--rosa), transparent 90%);
+  background-color: var(--rosa);
   border-bottom: 1.5px solid var(--default-color);
 }
 
@@ -2135,23 +2104,18 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.fondo-2 {
-  background-image: url(../img/bg-1-10.jpg);
-  background-position: top;
-  background-size: cover;
-  margin-inline: 24px;
-  margin-block-end: 56px;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+.portfolio {
+  background-color: var(--naranja);
+  background-image: url(../img/chincheta.png), url(../img/bg-papel.png);
+  background-position: top center, top left;
+  background-size: 55px, contain;
+  background-repeat: no-repeat;
+  margin-block: 16px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .portfolio .section-title {
-  background-image: url(../img/chincheta.png), url(../img/chincheta.png);
-  background-position: top left, top right;
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-color: rgb(210, 255, 212);
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
-  padding: 30px 12px;
+  padding-block-start: 35px;
 }
 
 .portfolio .section-title h2, 
@@ -2162,9 +2126,14 @@ transform: scale(1);
 .portfolio .container-texto {
   text-align: center;
   width: 50%;
-  padding: 30px;
-  margin-block: 60px;
-  background-color: white;
+  background-image: url(../img/chincheta.png), url(../img/chincheta.png);
+  background-position: top left, top right;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: var(--celeste);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
+  padding: 30px 35px;
+  margin-block-end: 60px;
 }
 
 .portfolio .container-texto p {
@@ -2211,21 +2180,23 @@ transform: scale(1);
   }
 }
 
+.portfolio .portfolio-item {
+  background-color: color-mix(in srgb, var(--nav-color), transparent 50%);
+  background-image: url(../img/bg-galeria.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 6px var(--naranja) solid;
+  padding: 13px;
+}
+
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
-.portfolio .color-azul {
-  border: 6px solid white;
-}
-
-.portfolio .color-rosa {
-  border: 6px solid white;
-}
-
-.portfolio .color-verde {
-  border: 6px solid white;
+.portfolio .portfolio-content.sin-sombra {
+  box-shadow: none;
 }
 
 .portfolio .portfolio-content img {
@@ -2315,11 +2286,12 @@ transform: scale(1);
   justify-content: center;
   text-align: center;
   transition: 0.3s;
-  background-color: color-mix(in srgb, var(--rosa), transparent 75%);
+  background-color: var(--celeste);
   background-image: url(../img/iconos-16.png), url(../img/iconos-17.png);
   background-size: 17%;
   background-repeat: no-repeat;
   background-position: top left, bottom right;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .testimonials .testimonial-item img {
@@ -2419,8 +2391,8 @@ transform: scale(1);
   overflow: hidden;
   text-align: center;
   transition: 0.3s;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
-  background-color: var(--accent-color);
+  box-shadow:-4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
+  background-image: url(../img/madera-jefes.jpg);
   padding: 15px;
   margin-block-start: 3rem;
 }
@@ -2440,6 +2412,8 @@ transform: scale(1);
 .fundadores .team-member .member-img {
   position: relative;
   overflow: hidden;
+  background-color: white;
+  padding-inline: 4px;
 }
 
 .fundadores .team-member .member-img:after {
@@ -2513,8 +2487,12 @@ transform: scale(1);
   overflow: hidden;
   text-align: center;
   transition: 0.3s;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
-  background-color: var(--contrast-color);
+  box-shadow:-4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
+  background-color: var(--naranja);
+  background-image: url(../img/chincheta-2.png), url(../img/chincheta-2.png);
+  background-position: top left, top right;
+  background-repeat: no-repeat;
+  background-size: 25px;
   padding: 15px;
   margin-block-start: 3rem;
 }
@@ -2546,7 +2524,7 @@ transform: scale(1);
 
 .team .team-member .social a {
   transition: color 0.3s;
-  color: var(--accent-color);
+  color: var(--default-color);
   margin: 15px 12px 15px 0;
   display: block;
   line-height: 0;
@@ -2554,16 +2532,11 @@ transform: scale(1);
 }
 
 .team .team-member .social a:hover {
-  color: var(--default-color);
+  color: color-mix(in srgb, var(--accent-color) 50%, var(--nav-color));
 }
 
 .team .team-member .social i {
   font-size: 18px;
-}
-
-.team .team-member .member-info-1 {
-  padding: 20px 15px 10px 15px;
-  background-color: var(--contrast-color);
 }
 
 .team .team-member .member-info h4 {
@@ -2571,27 +2544,21 @@ transform: scale(1);
   font-size: 18px;
   font-weight: 800;
   font-family: var(--default-font);
-  border-block-end: 3px solid var(--celeste);
-  display: inline-block;
 }
 
 .team .team-member .member-info span {
   display: block;
   font-size: 14px;
   font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
 .team .team-member .member-info {
-  padding: 15px 15px 20px 15px;
-  background-color: var(--contrast-color);
   text-align: left;
 }
 
 .team .team-member .member-info p {
   font-size: 14px;
   line-height: 26px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 .team .team-member:hover .social {
@@ -2719,15 +2686,10 @@ transform: scale(1);
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact {
-  background-image: url(../img/hero-texto.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .contact .info-item {
-  background-color: color-mix(in srgb, var(--naranja), transparent 40%);
+  background-color: var(--naranja);
   padding: 30px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .contact .info-item .contacto-icono {
@@ -2755,9 +2717,14 @@ transform: scale(1);
 }
 
 .contact .php-email-form {
-  background-color: var(--contrast-color);
+  background-image: url(../img/chincheta.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-color: var(--naranja);
   padding: 30px;
   height: 100%;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .contact .php-email-form .error-message {
@@ -3325,8 +3292,8 @@ transform: scale(1);
   background-position: top left, top right;
   background-size: 40px;
   background-repeat: no-repeat;
-  background-color: rgb(210, 255, 255);
-  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.58);
+  background-color: var(--celeste);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
   padding: 30px 12px;
   margin-block-end: 60px;
 }
@@ -3338,7 +3305,7 @@ transform: scale(1);
 .portfolio-details-detalle .portfolio-details-slider img {
   width: 100%;
   border: 10px solid var(--contrast-color);
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.58);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .portfolio-details-detalle .portfolio-details-slider .swiper-pagination {
@@ -3360,6 +3327,7 @@ transform: scale(1);
 .portfolio-details-detalle .portfolio-info {
   padding: 15px 30px 15px 30px;
   background: white;  
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .portfolio-details-detalle .portfolio-info h3 {
@@ -3384,6 +3352,7 @@ transform: scale(1);
 .portfolio-details-detalle .portfolio-description {
   padding: 30px 30px 15px 30px;
   background: white;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .portfolio-details-detalle .portfolio-description h2 {
@@ -3398,6 +3367,7 @@ transform: scale(1);
 .portfolio-details-detalle .portfolio-boton {
   background-color: var(--contrast-color);
   padding: 0 30px 30px 30px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 
