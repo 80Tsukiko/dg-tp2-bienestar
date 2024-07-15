@@ -1229,8 +1229,16 @@ section,
 --------------------------------------------------------------*/
 
 .about .content {
-  padding: 40px;
+  padding-inline-start: 20px;
 }
+
+@media (max-width: 991px) {
+  .about .content {
+    padding-inline-start: 0;
+    padding-block-start: 20px;
+  }  
+}
+
 
 .about .content h3 {
   font-family: var(--default-font);
@@ -1261,7 +1269,14 @@ section,
 }
 
 .certificado .content {
-  padding: 40px;
+  padding-inline-start: 20px;
+}
+
+@media (max-width: 991px) {
+  .certificado .content {
+    padding-inline-start: 0;
+    padding-block-start: 20px;
+  }  
 }
 
 .certificado .seccion-imagen {
