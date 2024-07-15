@@ -1491,7 +1491,7 @@ transform: rotate(1deg);
 /*-----------CELESTE-----------*/
 .services .service-item.item-orange {
   background-color: var(--naranja);
-  box-shadow: 4px 4px 4px 0px color-mix(in srgb, black, transparent 80%);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 80%);
   transform: rotate(-1deg);
 }
 
@@ -2818,12 +2818,12 @@ transform: rotate(1deg);
 --------------------------------------------------------------*/
 .contact .info-item {
   background-color: var(--naranja);
-  padding: 30px;
+  padding: 22px;
   box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
 }
 
 .contact .info-item .contacto-icono {
-  height: 48px;
+  height: 72px;
 }
 
 .contact .info-item i {
