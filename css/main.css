@@ -527,8 +527,9 @@ p {
   padding: 6px 8px;
   position: relative;
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-shadow: 0px 2px 25px color-mix(in srgb, var(--default-color), transparent 95%);
+  border: 6px solid white;
+  border-radius: 17px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
   display: flex;
   transition: 0.3s;
 }
@@ -551,6 +552,7 @@ p {
 
 .footer .footer-newsletter .newsletter-form input[type=submit] {
   border: 0;
+  border-radius: 0 17px 17px 0;
   font-size: 16px;
   padding: 0 20px;
   margin: -7px -8px -7px 0;
@@ -856,7 +858,10 @@ section,
   line-height: 0;
   padding: 15px 40px;
   transition: 0.5s;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  border: 6px solid white;
+  border-radius: 17px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
+  transform: rotate(1deg);
 }
 
 .btn-read-more span {
@@ -873,7 +878,7 @@ section,
 }
 
 .btn-read-more:hover {
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 55%);
   background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
@@ -885,13 +890,13 @@ section,
 
 .about .btn-read-more:hover {
   color: var(--background-color);
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 55%);
   background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
 .curso-details .btn-read-more:hover {
   color: var(--background-color);
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 55%);
   background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
 }
 
@@ -920,8 +925,12 @@ section,
 }
 
 .hero .order-2 {
-  padding-inline-end: 40px;
+  padding: 36px;
   margin-block-start: 50px;
+  background-image: url(../img/bg-papel.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
 }
 
 .hero h1 {
@@ -975,7 +984,9 @@ section,
   justify-content: center;
   padding: 9px 40px;
   transition: 0.5s;
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 75%);
+  border: 6px solid white;
+  border-radius: 17px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
   transform: rotate(1deg);
 }
 
@@ -986,7 +997,7 @@ section,
 }
 
 .hero .btn-get-started:hover {
-  box-shadow: 2px 2px 8px 0px color-mix(in srgb, black, transparent 55%);
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 55%);
   background-color: color-mix(in srgb, var(--accent-color) 90%, var(--nav-color));
   transform: rotate(0deg);
 }
@@ -1656,7 +1667,9 @@ transform: rotate(1deg);
   font-weight: 700;
   font-variant-numeric: lining-nums;
   transition: 0.3s;
-  border: 1px solid var(--accent-color);
+  border: 6px solid white;
+  border-radius: 17px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
   background-color: var(--accent-color);
 }
 
@@ -2922,10 +2935,11 @@ transform: rotate(1deg);
 .contact .php-email-form button[type=submit] {
   background: var(--accent-color);
   color: var(--contrast-color);
-  border: 0;
+  border: 6px solid white;
+  border-radius: 17px;
+  box-shadow: -4px 4px 4px 0px color-mix(in srgb, black, transparent 75%);
   padding: 10px 30px;
   transition: 0.4s;
-  border-radius: 4px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
